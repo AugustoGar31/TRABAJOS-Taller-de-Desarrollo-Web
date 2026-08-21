@@ -1,7 +1,7 @@
+import random
+
+def girar_ruleta():
+	return random.randint(1, 100)
+
 def main():
-	print("Hola desde mi branch")
-
-
-if __name__ == "__main__":
-	main()
-
+	print(f"La ruleta eligio el numero: {girar_ruleta()}")
