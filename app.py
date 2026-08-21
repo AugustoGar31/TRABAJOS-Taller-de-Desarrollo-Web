@@ -5,3 +5,6 @@ def girar_ruleta():
 
 def main():
 	print(f"La ruleta eligio el numero: {girar_ruleta()}")
+
+if __name__ == "__main__":
+    main()
