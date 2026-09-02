@@ -1,3 +1,3 @@
 # TRABAJOS-Taller-de-Desarrollo-Web
 tp´s
-Es una ruleta nomas 
+HTML Y CSS pagina NexoSQL
