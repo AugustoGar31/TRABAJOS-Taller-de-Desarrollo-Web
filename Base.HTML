@@ -7,72 +7,52 @@
     <link rel="stylesheet" href="Base.css" />
   </head>
   <body>
-    <header class="global-header">
-      <section class="title-block">
-        <span class="subtitle">TALLER PRÁCTICO SQL</span>
-        <h1 class="main-title">Arquitectura Interna del Motor SQL</h1>
-      </section>
-      <button class="erd-button">
-        <p1> Ver Diagrama ERD</p1>
-      </button>
+    <header>
+      <div>
+        <span>TALLER PRÁCTICO SQL</span>
+        <h1>Arquitectura Interna del Motor SQL</h1>
+      </div>
+      <button>Ver Diagrama ERD</button>
     </header>
 
-    <main class="main-content">
-      <section class="metadata-card card">
-        <section class="card-header">
-          <span class="card-icon">⚙️</span>
-          <h2 class="card-title">Exploración de Metadatos del Sistema</h2>
-        </section>
-        <section class="badge-section">
-          <span class="badge badge-blue">DQL</span>
-          <span class="badge badge-orange">DESAFÍO PRÁCTICO</span>
-        </section>
-        <p class="description-p">
+    <main>
+      <article class="tarjeta">
+        <div class="fila">
+          <span>⚙️</span>
+          <h2>Exploración de Metadatos del Sistema</h2>
+        </div>
+        <div>
+          <span class="etiqueta azul">DQL</span>
+          <span class="etiqueta naranja">DESAFÍO PRÁCTICO</span>
+        </div>
+        <p>
           Consulta el catálogo de tablas del sistema para listar los nombres de
           todas las tablas existentes en la base de datos.
         </p>
-      </section>
-      <!-- EDITOR Y RESULTADOS -->
-      <section class="editor-section">
-        <!-- PESTAÑA EDITOR -->
-        <section class="tab-header">
-          <span class="active-tab">
-            <span class="icon"><></span> Editor & Resultados
-          </span>
-        </section>
-        <!-- TARJETA EDITOR SQL -->
-        <section class="editor-card card">
-          <section class="card-header">
-            <section class="left-header">
-              <span class="card-icon">🗄️</span>
-              <h3 class="card-title">Editor SQL</h3>
-            </section>
-            <section class="header-actions">
-              <span class="action-icon">📋</span>
-              <span class="action-icon">↩️</span>
-            </section>
-          </section>
-          <section class="code-block">
+      </article>
+
+      <div class="editor">
+        <div class="pestana">&lt;&gt; Editor y Resultados</div>
+
+        <article class="tarjeta">
+          <div class="fila">
+            <div class="fila">
+              <h3>Editor SQL</h3>
+            </div>
+          </div>
+          <div class="codigo">
             <p>-- Escribe tu consulta aquí</p>
-            <form>
-              <label for="mensaje"></label>
-              <textarea id="mensaje" rows="4" cols="50"></textarea>
-            </form>
-          </section>
-          <footer class="card-footer">
-            <button class="run-button">
-              <span class="icon">▶️</span> Ejecutar Consulta
-            </button>
+            <textarea id="mensaje" rows="4" cols="50"></textarea>
+          </div>
+          <footer>
+            <button>Ejecutar Consulta</button>
           </footer>
-        </section>
-        <!-- TARJETA RESULTADOS -->
-        <section class="results-card card">
-          <span class="large-icon">🗄️</span>
-          <p class="results-text">
-            Ejecuta una consulta para visualizar el conjunto de datos retornado.
-          </p>
-        </section>
-      </section>
+        </article>
+
+        <article class="tarjeta resultados">
+          <p>Ejecuta una consulta para visualizar el conjunto de datos retornado.</p>
+        </article>
+      </div>
     </main>
   </body>
 </html>
