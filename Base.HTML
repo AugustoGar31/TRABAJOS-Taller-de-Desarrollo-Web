@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NexoSQL</title>
     <link rel="stylesheet" href="Base.css" />
+    <script src="Base.js"></script>
   </head>
   <body>
     <header>
@@ -12,7 +13,7 @@
         <span>TALLER PRÁCTICO SQL</span>
         <h1>Arquitectura Interna del Motor SQL</h1>
       </div>
-      <button>Ver Diagrama ERD</button>
+      <button id="verDiagrama">Ver Diagrama ERD</button>
     </header>
 
     <main>
@@ -26,13 +27,13 @@
           <span class="etiqueta naranja">DESAFÍO PRÁCTICO</span>
         </div>
         <p>
-          Consulta el catálogo de tablas del sistema para listar los nombres de
-          todas las tablas existentes en la base de datos.
+          Escribe la consulta correcta para inspeccionar los primeros 5 alumnos
+          registrados.
         </p>
       </article>
 
       <div class="editor">
-        <div class="pestana">&lt;&gt; Editor y Resultados</div>
+        <div class="pestana">Editor y Resultados</div>
 
         <article class="tarjeta">
           <div class="fila">
@@ -45,11 +46,11 @@
             <textarea id="mensaje" rows="4" cols="50"></textarea>
           </div>
           <footer>
-            <button>Ejecutar Consulta</button>
+            <button id="ejecutarConsulta">Ejecutar Consulta</button>
           </footer>
         </article>
 
-        <article class="tarjeta resultados">
+        <article id="resultadoConsulta" class="tarjeta resultados">
           <p>Ejecuta una consulta para visualizar el conjunto de datos retornado.</p>
         </article>
       </div>

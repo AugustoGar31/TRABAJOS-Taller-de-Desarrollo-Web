@@ -130,3 +130,79 @@ footer button {
 	background: #0d1117;
 	text-align: center;
 }
+
+.correcto {
+	background: #176b3a;
+	border-color: #2ea043;
+}
+
+.incorrecto {
+	background: #8b2020;
+	border-color: #f85149;
+}
+
+.diagrama {
+	display: block;
+}
+
+.diagrama-contenido {
+	width: 100%;
+}
+
+.tablas {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 20px;
+	margin-top: 20px;
+}
+
+.tabla {
+	background: #0d1117;
+	border: 1px solid #30363d;
+	border-radius: 6px;
+	padding: 15px;
+}
+
+.tabla h3 {
+	color: #12c2e9;
+	border-bottom: 1px solid #30363d;
+	padding-bottom: 12px;
+	margin-bottom: 10px;
+}
+
+.tabla p {
+	display: flex;
+	justify-content: space-between;
+	gap: 10px;
+	margin-bottom: 10px;
+	font-family: 'Courier New', monospace;
+}
+
+.tabla p span {
+	color: #718096;
+}
+
+.tabla .clave {
+	color: #f0a000;
+}
+
+.tabla .foranea {
+	color: #7c83ff;
+}
+
+@media (max-width: 900px) {
+	.tablas {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 600px) {
+	header,
+	main {
+		flex-direction: column;
+	}
+
+	.tablas {
+		grid-template-columns: 1fr;
+	}
+}
