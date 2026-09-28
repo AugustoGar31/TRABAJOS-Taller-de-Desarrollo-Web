@@ -8,19 +8,32 @@ function volverAlInicio() {
   window.location.href = "Base.HTML";
 }
 
+// Pistas para revisar cada actividad.
+const feedbacks = [
+  "Revisá SELECT, los campos id_alumno, nombre y apellido, la tabla alumnos y LIMIT 5.",
+  "Revisá SELECT nombre y promedio, WHERE promedio >= 8.5 y ORDER BY promedio DESC.",
+  "Revisá id_curso, AVG(nota_final), AS promedio_curso y GROUP BY id_curso."
+];
+
 // Comprueba si la consulta escrita es correcta.
 function revisarConsulta() {
   // Obtiene los elementos necesarios de la terminal.
   const editor = document.getElementById("editorActividad");
   const resultado = document.getElementById("resultadoConsulta");
-  const correcta = document.getElementById("consulta").value.trim() === editor.dataset.respuesta;
+  const consulta = document.getElementById("consulta").value.trim();
+  const actividad = document.querySelector(".activa");
+  const numero = actividad.dataset.actividad;
+  const correcta = consulta === editor.dataset.respuesta;
   // Define el estilo y el mensaje según el resultado.
   const estado = correcta ? "correcto" : "incorrecto";
-  const mensaje = correcta ? "Consulta correcta" : "Consulta incorrecta";
-  const simbolo = correcta ? "✓" : "✗";
+  let mensaje = "Consulta correcta ✓";
+
+  if (!correcta) {
+    mensaje = consulta ? `Consulta incorrecta ✗<br>${feedbacks[numero - 1]}` : "Escribí una consulta para comenzar.";
+  }
 
   resultado.className = `resultados ${estado}`;
-  resultado.innerHTML = `<p>${mensaje} ${simbolo}</p>`;
+  resultado.innerHTML = `<p>${mensaje}</p>`;
 
   // Marca la actividad cuando la respuesta es correcta.
   if (correcta) {
@@ -46,7 +59,6 @@ function seleccionarActividad(actividad) {
   document.querySelector(".activa").classList.remove("activa");
   actividad.classList.add("activa");
 
-  // Actualiza la terminal y limpia el resultado anterior.
   // Cambia la respuesta esperada y limpia la terminal.
   editor.dataset.respuesta = respuestas[numero - 1];
   document.getElementById("tituloActividad").textContent = `Actividad ${numero}`;
