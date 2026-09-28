@@ -16,6 +16,7 @@
       <button id="volver">Volver</button>
     </header>
 
+    <!-- Contenido principal del diagrama entidad-relación. -->
     <main class="diagrama">
       <article class="tarjeta diagrama-contenido">
         <div class="fila">
@@ -25,7 +26,9 @@
           Tablas principales, claves primarias y claves foráneas del sistema.
         </p>
 
+        <!-- Conjunto de tablas de la base de datos. -->
         <div class="tablas">
+          <!-- Tabla de estudiantes. -->
           <section class="tabla">
             <h3>estudiantes</h3>
             <p class="clave">🔑 id_estudiante (PK) <span>INTEGER</span></p>
@@ -35,6 +38,7 @@
             <p>fecha_ingreso <span>DATE</span></p>
           </section>
 
+          <!-- Tabla de profesores. -->
           <section class="tabla">
             <h3>profesores</h3>
             <p class="clave">🔑 id_profesor (PK) <span>INTEGER</span></p>
@@ -43,6 +47,7 @@
             <p>email <span>TEXT</span></p>
           </section>
 
+          <!-- Tabla de cursos. -->
           <section class="tabla">
             <h3>cursos</h3>
             <p class="clave">🔑 id_curso (PK) <span>INTEGER</span></p>
@@ -51,6 +56,7 @@
             <p class="foranea">id_profesor (FK) <span>INTEGER</span></p>
           </section>
 
+          <!-- Tabla de inscripciones. -->
           <section class="tabla">
             <h3>inscripciones</h3>
             <p class="clave">🔑 id_inscripcion (PK) <span>INTEGER</span></p>

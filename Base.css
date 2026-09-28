@@ -1,9 +1,11 @@
+/* Ajustes generales para todos los elementos. */
 * {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
 }
 
+/* Estilo general de la página. */
 body {
 	background: #0d1117;
 	color: #e6edf3;
@@ -11,6 +13,7 @@ body {
 	padding: 20px;
 }
 
+/* Encabezado y título principal. */
 header {
 	display: flex;
 	justify-content: space-between;
@@ -20,6 +23,7 @@ header {
 	margin-bottom: 20px;
 }
 
+/* Tamaños de los títulos. */
 h1 {
 	font-size: 1.5rem;
 	margin-top: 5px;
@@ -30,6 +34,7 @@ h3 {
 	font-size: 1.2rem;
 }
 
+/* Estilo base de los botones. */
 button {
 	background: #21262d;
 	color: #e6edf3;
@@ -39,12 +44,14 @@ button {
 	cursor: pointer;
 }
 
+/* Distribución de actividades y editor. */
 main {
 	display: flex;
 	gap: 20px;
 	align-items: flex-start;
 }
 
+/* Lista vertical de actividades. */
 .actividades {
 	flex: 1;
 	display: flex;
@@ -52,6 +59,7 @@ main {
 	gap: 20px;
 }
 
+/* Apariencia de las actividades seleccionables. */
 .seleccionable {
 	cursor: pointer;
 	transition: border-color 0.2s, background 0.2s;
@@ -63,16 +71,19 @@ main {
 	border-color: #12c2e9;
 }
 
+/* Símbolo que indica que una actividad fue completada. */
 .estado-actividad {
 	color: #2ea043;
 	font-size: 1.3rem;
 	font-weight: bold;
 }
 
+/* Borde de una actividad completada. */
 .hecha {
 	border-color: #2ea043;
 }
 
+/* Tarjetas principales del sitio. */
 .tarjeta {
 	background: #161b22;
 	border: 1px solid #30363d;
@@ -81,6 +92,7 @@ main {
 	flex: 1;
 }
 
+/* Alineación de elementos en una fila. */
 .fila {
 	display: flex;
 	align-items: center;
@@ -89,6 +101,7 @@ main {
 	margin-bottom: 15px;
 }
 
+/* Etiquetas de tipo de actividad. */
 .etiqueta {
 	display: inline-block;
 	color: white;
@@ -98,6 +111,7 @@ main {
 	border-radius: 4px;
 }
 
+/* Colores de las etiquetas. */
 .azul {
 	background: #1f6feb;
 }
@@ -106,11 +120,13 @@ main {
 	background: #f18c22;
 }
 
+/* Texto general. */
 p {
 	font-size: 0.95rem;
 	line-height: 1.6;
 }
 
+/* Columna que contiene la terminal. */
 .editor {
 	flex: 1;
 	display: flex;
@@ -118,10 +134,12 @@ p {
 	gap: 20px;
 }
 
+/* Espacio debajo del título de la terminal. */
 .editor-actividad h3 {
 	margin-bottom: 15px;
 }
 
+/* Pestaña superior del editor. */
 .pestana {
 	background: #12c2e9;
 	color: white;
@@ -131,6 +149,7 @@ p {
 	align-self: flex-start;
 }
 
+/* Área visual para escribir código SQL. */
 .codigo {
 	background: #0d1117;
 	padding: 15px;
@@ -139,6 +158,7 @@ p {
 	margin-bottom: 15px;
 }
 
+/* Campo de texto de la consulta. */
 textarea {
 	width: 100%;
 	min-height: 80px;
@@ -148,17 +168,20 @@ textarea {
 	border: 1px solid #30363d;
 }
 
+/* Alineación del botón de ejecución. */
 footer {
 	display: flex;
 	justify-content: flex-end;
 }
 
+/* Color del botón principal. */
 footer button {
 	background: #12c2e9;
 	color: white;
 	font-weight: bold;
 }
 
+/* Caja donde se muestra el resultado. */
 .resultados {
 	background: #0d1117;
 	text-align: center;
@@ -166,16 +189,19 @@ footer button {
 	padding: 12px;
 }
 
+/* Resultado correcto. */
 .correcto {
 	background: #176b3a;
 	border-color: #2ea043;
 }
 
+/* Resultado incorrecto. */
 .incorrecto {
 	background: #8b2020;
 	border-color: #f85149;
 }
 
+/* Estructura y tablas del diagrama ER. */
 .diagrama {
 	display: block;
 }
@@ -191,6 +217,7 @@ footer button {
 	margin-top: 20px;
 }
 
+/* Tarjeta individual de cada tabla. */
 .tabla {
 	background: #0d1117;
 	border: 1px solid #30363d;
@@ -198,6 +225,7 @@ footer button {
 	padding: 15px;
 }
 
+/* Título de cada tabla del diagrama. */
 .tabla h3 {
 	color: #12c2e9;
 	border-bottom: 1px solid #30363d;
@@ -205,6 +233,7 @@ footer button {
 	margin-bottom: 10px;
 }
 
+/* Campos y tipos de datos de las tablas. */
 .tabla p {
 	display: flex;
 	justify-content: space-between;
@@ -213,10 +242,12 @@ footer button {
 	font-family: 'Courier New', monospace;
 }
 
+/* Color de los tipos de datos. */
 .tabla p span {
 	color: #718096;
 }
 
+/* Color de las claves primarias y foráneas. */
 .tabla .clave {
 	color: #f0a000;
 }
@@ -225,12 +256,14 @@ footer button {
 	color: #7c83ff;
 }
 
+/* Adaptación del diagrama para pantallas medianas. */
 @media (max-width: 900px) {
 	.tablas {
 		grid-template-columns: repeat(2, 1fr);
 	}
 }
 
+/* Adaptación general para celulares. */
 @media (max-width: 600px) {
 	header,
 	main {
