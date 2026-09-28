@@ -42,6 +42,35 @@ button {
 main {
 	display: flex;
 	gap: 20px;
+	align-items: flex-start;
+}
+
+.actividades {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.seleccionable {
+	cursor: pointer;
+	transition: border-color 0.2s, background 0.2s;
+}
+
+.seleccionable:hover,
+.seleccionable.activa {
+	background: #1c2633;
+	border-color: #12c2e9;
+}
+
+.estado-actividad {
+	color: #2ea043;
+	font-size: 1.3rem;
+	font-weight: bold;
+}
+
+.hecha {
+	border-color: #2ea043;
 }
 
 .tarjeta {
@@ -89,6 +118,10 @@ p {
 	gap: 20px;
 }
 
+.editor-actividad h3 {
+	margin-bottom: 15px;
+}
+
 .pestana {
 	background: #12c2e9;
 	color: white;
@@ -129,6 +162,8 @@ footer button {
 .resultados {
 	background: #0d1117;
 	text-align: center;
+	margin-top: 15px;
+	padding: 12px;
 }
 
 .correcto {
@@ -200,6 +235,11 @@ footer button {
 	header,
 	main {
 		flex-direction: column;
+	}
+
+	.actividades,
+	.editor {
+		width: 100%;
 	}
 
 	.tablas {
