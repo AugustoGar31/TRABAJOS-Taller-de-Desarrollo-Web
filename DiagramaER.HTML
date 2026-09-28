@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diagrama ER NexoSQL</title>
+    <link rel="stylesheet" href="Base.css" />
+    <script src="Base.js"></script>
+  </head>
+  <body>
+    <header>
+      <div>
+        <span>TALLER PRÁCTICO SQL</span>
+        <h1>Diagrama Entidad-Relación</h1>
+      </div>
+      <button id="volver">Volver</button>
+    </header>
+
+    <!-- Contenido principal del diagrama entidad-relación. -->
+    <main class="diagrama">
+      <article class="tarjeta diagrama-contenido">
+        <div class="fila">
+          <h2>Esquema de Gestión Académica Universitaria</h2>
+        </div>
+        <p>
+          Tablas principales, claves primarias y claves foráneas del sistema.
+        </p>
+
+        <!-- Conjunto de tablas de la base de datos. -->
+        <div class="tablas">
+          <!-- Tabla de estudiantes. -->
+          <section class="tabla">
+            <h3>estudiantes</h3>
+            <p class="clave">🔑 id_estudiante (PK) <span>INTEGER</span></p>
+            <p>nombre <span>TEXT</span></p>
+            <p>carrera <span>TEXT</span></p>
+            <p>promedio <span>REAL</span></p>
+            <p>fecha_ingreso <span>DATE</span></p>
+          </section>
+
+          <!-- Tabla de profesores. -->
+          <section class="tabla">
+            <h3>profesores</h3>
+            <p class="clave">🔑 id_profesor (PK) <span>INTEGER</span></p>
+            <p>nombre <span>TEXT</span></p>
+            <p>departamento <span>TEXT</span></p>
+            <p>email <span>TEXT</span></p>
+          </section>
+
+          <!-- Tabla de cursos. -->
+          <section class="tabla">
+            <h3>cursos</h3>
+            <p class="clave">🔑 id_curso (PK) <span>INTEGER</span></p>
+            <p>nombre_curso <span>TEXT</span></p>
+            <p>creditos <span>INTEGER</span></p>
+            <p class="foranea">id_profesor (FK) <span>INTEGER</span></p>
+          </section>
+
+          <!-- Tabla de inscripciones. -->
+          <section class="tabla">
+            <h3>inscripciones</h3>
+            <p class="clave">🔑 id_inscripcion (PK) <span>INTEGER</span></p>
+            <p class="foranea">id_estudiante (FK) <span>INTEGER</span></p>
+            <p class="foranea">id_curso (FK) <span>INTEGER</span></p>
+            <p>nota_final <span>REAL</span></p>
+          </section>
+        </div>
+      </article>
+    </main>
+  </body>
+</html>
