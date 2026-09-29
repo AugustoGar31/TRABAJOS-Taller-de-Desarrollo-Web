@@ -13,7 +13,10 @@
         <span>TALLER PRÁCTICO SQL</span>
         <h1>Arquitectura Interna del Motor SQL</h1>
       </div>
-      <button id="verDiagrama">Ver Diagrama ERD</button>
+      <div class="botones-header">
+        <button id="verDiagrama">Ver Diagrama ERD</button>
+        <button id="verInfo">Acerca del proyecto</button>
+      </div>
     </header>
 
     <!-- Contenido principal: actividades y terminal SQL. -->
@@ -66,6 +69,8 @@
       <!-- Terminal única para escribir y comprobar consultas. -->
       <div class="editor">
         <div class="pestana">Editor y Resultados</div>
+        <!-- Muestra cuántas actividades fueron completadas. -->
+        <p id="progreso">Actividades completadas: 0 de 3</p>
         <article id="editorActividad" class="tarjeta editor-actividad" data-respuesta="SELECT id_alumno, nombre, apellido FROM alumnos LIMIT 5;">
           <!-- Título que cambia según la actividad elegida. -->
           <h3 id="tituloActividad">Actividad 1</h3>
@@ -75,10 +80,15 @@
             <textarea id="consulta" rows="4" cols="50"></textarea>
           </div>
           <!-- Botón para comprobar la consulta. -->
-          <footer><button id="ejecutarConsulta">Ejecutar Consulta</button></footer>
+          <footer>
+            <button id="reiniciarActividad">Reiniciar Actividad</button>
+            <button id="ejecutarConsulta">Ejecutar Consulta</button>
+          </footer>
           <!-- Mensaje de consulta correcta o incorrecta. -->
           <div id="resultadoConsulta" class="resultados"><p>Ejecuta una consulta para visualizar el resultado.</p></div>
         </article>
+        <!-- Mensaje que aparece al completar todas las actividades. -->
+        <p id="mensajeFinal" class="mensaje-final">¡Felicitaciones! Completaste todas las actividades.</p>
       </div>
     </main>
   </body>
