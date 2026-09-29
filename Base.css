@@ -134,6 +134,12 @@ p {
 	gap: 20px;
 }
 
+/* Contador de actividades completadas. */
+#progreso {
+	color: #12c2e9;
+	font-weight: bold;
+}
+
 /* Espacio debajo del título de la terminal. */
 .editor-actividad h3 {
 	margin-bottom: 15px;
@@ -181,6 +187,11 @@ footer button {
 	font-weight: bold;
 }
 
+/* Botón para volver a intentar una actividad. */
+#reiniciarActividad {
+	background: #21262d;
+}
+
 /* Caja donde se muestra el resultado. */
 .resultados {
 	background: #0d1117;
@@ -199,6 +210,21 @@ footer button {
 .incorrecto {
 	background: #8b2020;
 	border-color: #f85149;
+}
+
+/* Mensaje final, oculto hasta completar las tres actividades. */
+.mensaje-final {
+	display: none;
+	background: #176b3a;
+	border: 1px solid #2ea043;
+	border-radius: 6px;
+	padding: 15px;
+	text-align: center;
+	font-weight: bold;
+}
+
+.mensaje-final.mostrar {
+	display: block;
 }
 
 /* Estructura y tablas del diagrama ER. */

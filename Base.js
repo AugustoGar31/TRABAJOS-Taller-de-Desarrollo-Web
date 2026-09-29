@@ -10,9 +10,9 @@ function volverAlInicio() {
 
 // Pistas para revisar cada actividad.
 const feedbacks = [
-  "Revisá SELECT, los campos id_alumno, nombre y apellido, la tabla alumnos y LIMIT 5.",
-  "Revisá SELECT nombre y promedio, WHERE promedio >= 8.5 y ORDER BY promedio DESC.",
-  "Revisá id_curso, AVG(nota_final), AS promedio_curso y GROUP BY id_curso."
+  "Revisá SELECT, los campos id_alumno, nombre y apellido, la tabla alumnos y LIMIT 5;",
+  "Revisá SELECT nombre y promedio, WHERE promedio >= 8.5 y ORDER BY promedio DESC;",
+  "Revisá id_curso, AVG(nota_final), AS promedio_curso y GROUP BY id_curso;"
 ];
 
 // Comprueba si la consulta escrita es correcta.
@@ -39,7 +39,30 @@ function revisarConsulta() {
   if (correcta) {
     document.querySelector(".activa").classList.add("hecha");
     document.querySelector(".activa .estado-actividad").textContent = "✓";
+    actualizarProgreso();
   }
+}
+
+// Actualiza el contador y muestra el mensaje final.
+function actualizarProgreso() {
+  const hechas = document.querySelectorAll(".hecha").length;
+  document.getElementById("progreso").textContent = `Actividades completadas: ${hechas} de 3`;
+
+  if (hechas === 3) {
+    document.getElementById("mensajeFinal").classList.add("mostrar");
+  }
+}
+
+// Reinicia la actividad que está seleccionada.
+function reiniciarActividad() {
+  const actividad = document.querySelector(".activa");
+  actividad.classList.remove("hecha");
+  actividad.querySelector(".estado-actividad").textContent = "";
+  document.getElementById("consulta").value = "";
+  document.getElementById("resultadoConsulta").className = "resultados";
+  document.getElementById("resultadoConsulta").innerHTML = "<p>Ejecuta una consulta para visualizar el resultado.</p>";
+  document.getElementById("mensajeFinal").classList.remove("mostrar");
+  actualizarProgreso();
 }
 
 // Cambia la respuesta esperada según la actividad seleccionada.
@@ -73,6 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const botonDiagrama = document.getElementById("verDiagrama");
   const botonVolver = document.getElementById("volver");
   const botonConsulta = document.getElementById("ejecutarConsulta");
+  const botonReiniciar = document.getElementById("reiniciarActividad");
   const actividades = document.querySelectorAll(".seleccionable");
 
   // Conecta el botón con el diagrama ER.
@@ -88,6 +112,11 @@ document.addEventListener("DOMContentLoaded", function () {
   // Conecta el botón que revisa la consulta.
   if (botonConsulta) {
     botonConsulta.onclick = revisarConsulta;
+  }
+
+  // Conecta el botón para reiniciar la actividad.
+  if (botonReiniciar) {
+    botonReiniciar.onclick = reiniciarActividad;
   }
 
   // Permite seleccionar cualquier actividad.
