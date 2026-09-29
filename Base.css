@@ -23,6 +23,12 @@ header {
 	margin-bottom: 20px;
 }
 
+/* Agrupa los botones del encabezado. */
+.botones-header {
+	display: flex;
+	gap: 10px;
+}
+
 /* Tamaños de los títulos. */
 h1 {
 	font-size: 1.5rem;
@@ -132,6 +138,24 @@ p {
 	display: flex;
 	flex-direction: column;
 	gap: 20px;
+}
+
+/* Contenido de la sección acerca del proyecto. */
+.info {
+	display: block;
+}
+
+.info-contenido {
+	width: 100%;
+}
+
+.info-contenido h2,
+.info-contenido h3 {
+	margin-bottom: 10px;
+}
+
+.info-contenido h3 {
+	margin-top: 20px;
 }
 
 /* Contador de actividades completadas. */

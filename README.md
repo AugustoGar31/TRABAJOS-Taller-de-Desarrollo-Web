@@ -1,3 +1,3 @@
 # TRABAJOS-Taller-de-Desarrollo-Web
-tp´s
+Primera Entrega Taller de Desarrollo Web - Proyecto 
 HTML, CSS Y JavaScript pagina NexoSQL

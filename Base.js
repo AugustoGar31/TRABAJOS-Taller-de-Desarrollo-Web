@@ -3,6 +3,11 @@ function irAlDiagrama() {
   window.location.href = "DiagramaER.HTML";
 }
 
+// Abre la información del proyecto.
+function irAInfo() {
+  window.location.href = "Info.HTML";
+}
+
 // Regresa a la página principal.
 function volverAlInicio() {
   window.location.href = "Base.HTML";
@@ -94,6 +99,7 @@ function seleccionarActividad(actividad) {
 document.addEventListener("DOMContentLoaded", function () {
   // Busca los botones y las actividades de la página.
   const botonDiagrama = document.getElementById("verDiagrama");
+  const botonInfo = document.getElementById("verInfo");
   const botonVolver = document.getElementById("volver");
   const botonConsulta = document.getElementById("ejecutarConsulta");
   const botonReiniciar = document.getElementById("reiniciarActividad");
@@ -102,6 +108,11 @@ document.addEventListener("DOMContentLoaded", function () {
   // Conecta el botón con el diagrama ER.
   if (botonDiagrama) {
     botonDiagrama.onclick = irAlDiagrama;
+  }
+
+  // Conecta el botón con la información del proyecto.
+  if (botonInfo) {
+    botonInfo.onclick = irAInfo;
   }
 
   // Conecta el botón para volver al inicio.
